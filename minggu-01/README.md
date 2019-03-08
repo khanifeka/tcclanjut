@@ -51,18 +51,18 @@ Langkah-langkah instalasi :
 
 * Cek instalasi Git yang dilakukan dari menu Start dengan mengetikkan "git". Terdapat 2 buah Git ( Bash dan Gui )
 
-	![step 12](12.PNG "12")
+	![step 12](12.png "12")
 
 * Git Bash
 
-	![step 13](13.PNG "13")
+	![step 13](13.png "13")
 
 * Git Gui
 
-	![step 14](14.PNG "14")
+	![step 14](14.png "14")
 
 * Mengecek versi git dari Command Promt dengan perintah "git --version". Dan diketahui versi Git yang terinstal adalah versi 2.6.1.windows.1
 
-	![step 15](15.PNG "15")
+	![step 15](15.png "15")
 
 * Selesai
