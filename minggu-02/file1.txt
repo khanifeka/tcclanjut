@@ -1,4 +1,4 @@
 Rismiyati / 165410108
 
-mencoba branching pada git
-----------------------
+mencoba branching pada git.
+--------------------------------
