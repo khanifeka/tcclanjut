@@ -18,7 +18,7 @@ File yang ditambahkan bernama "file1.txt".
 	![gambar 3](gambar/3.png)
 
 3. **Melakukan compare & pull request**
-compare & pull requst digunakan untuk membandingkan cabang master dan latihan. Ini dilakukan dengan mengklik tombol Compare & Pull Request.
+	compare & pull requst digunakan untuk membandingkan cabang master dan latihan. Ini dilakukan dengan mengklik tombol Compare & Pull Request.
 
 	![gambar 4](gambar/4.png)
 
@@ -31,11 +31,11 @@ compare & pull requst digunakan untuk membandingkan cabang master dan latihan. I
 
 	![gambar 7](gambar/7.png)
 
-Dilakukan dengan mengklik tombol *confirm merge*.
+	Dilakukan dengan mengklik tombol *confirm merge*.
 
 	![gambar 8](gambar/8.png)
 
-Pull request untuk menambahkan file berhasil dilakukan.
+	Pull request untuk menambahkan file berhasil dilakukan.
 
 
 
