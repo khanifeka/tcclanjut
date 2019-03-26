@@ -7,17 +7,20 @@ Docker container merupakan sebuah image yang bersifat read-write. Pada setiap pe
 
 1. Menjalankan sebuah Container bernama Redis
 
-  Untuk menemukan file images dengan nama **redis** pada [registry.hub.docker.com](https://hub.docker.com) dapat dilakukan dengan perintah **"docker search redis"**
+    Untuk menemukan file images dengan nama **redis** pada [registry.hub.docker.com](https://hub.docker.com) dapat dilakukan dengan perintah **"docker search redis"**
 
-    ![mencari redis](img/1-1.png)
+      ![mencari redis](img/1-1.png)
+
     
     Dan untuk menjalankan images bernama redis, dilakukan dengan perintah **"docker run -d redis"**
+
  
-    ![menjalankan redis](img/1-2.png)
+      ![menjalankan redis](img/1-2.png)
 
  2. Melihat Container yang sedang berjalan
 
     Untuk melihat seluruh container yang berjalan, dilakukan dengan perintah **"docker ps"**
+
     Perintah ini menampilkan list dari semua container yang berjalan, images yang digunakan untuk menjalankan container dan status uptime-nya.
 
     ![list container](img/1-3.png)
@@ -44,9 +47,9 @@ Docker container merupakan sebuah image yang bersifat read-write. Pada setiap pe
 
 5. Melakukan Maping Data yang ada pada Container
 
-  Data yang disimpan pada container, terus dihapus ketika kita menghapus dan menciptakan kembali container. Untuk itu, perlu mengikat direktori dengan cara di-mount. File-file yang ada di direktori pada host dapat diakses oleh kontainer dan data apa pun yang diubah / ditulis ke direktori di dalam kontainer akan disimpan di host.
+    Data yang disimpan pada container, terus dihapus ketika kita menghapus dan menciptakan kembali container. Untuk itu, perlu mengikat direktori dengan cara di-mount. File-file yang ada di direktori pada host dapat diakses oleh kontainer dan data apa pun yang diubah / ditulis ke direktori di dalam kontainer akan disimpan di host.
 
-  **"docker run -d --name redisMapped -v /opt/docker/data/redis:/data redis"**
+    **"docker run -d --name redisMapped -v /opt/docker/data/redis:/data redis"**
 
     ![mapping lokasi data](img/1-6.png)
 
@@ -57,4 +60,5 @@ Docker container merupakan sebuah image yang bersifat read-write. Pada setiap pe
   - **docker run ubuntu ps** adalah perintah untuk memulai countsiner Ubuntu dan mengeksekusi perintah ps untuk melihat semua proses yang berjalan dalam wadah.
   - **docker run -it ubuntu bash** digunakan untuk mendapatkan akses ke bash shell di dalam sebuah wadah.
 
-  ## [kembali](README.md "Kembali ke awal")
+
+## [*Kembali*](README.md "Kembali ke awal")

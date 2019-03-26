@@ -6,4 +6,4 @@ Untuk mempelajari Docker, dapat dilakukan melalui web [katacoda](https://www.kat
 
 1. [Courses 1 : Deploying Your First Docker Container](courses1.md)
 2. [Courses 2 : Deploy Static HTML Website as Container](courses2.md)
-3. [Courses 2 : Building Container Images](course3.md)
+3. [Courses 3 : Building Container Images](courses3.md)
