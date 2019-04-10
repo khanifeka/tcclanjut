@@ -33,16 +33,16 @@ Ketika menghubungkan container dengan link, sangat penting untuk memberikan nama
 
   - **docker run --link redis-server:redis alpine cat /etc/hosts**
 
-    Docker akan meng-update file HOSTS ubuntu container dengan menambahkan sebuah input untuk sumber container berupa *nama asli container, alias, dan hash id* .
+  Docker akan meng-update file HOSTS ubuntu container dengan menambahkan sebuah input untuk sumber container berupa *nama asli container, alias, dan hash id* .
 
 
-  ![updatehost](img\1_2b.png)
+![updatehost](img\1_2b.png)
 
-    Dari gambar diatas, sudah dipastikan bahwa antar kedua container (alpine dan redis-server) sudah terhubung dengan menggunakan fasilitas link.
+  Dari gambar diatas, sudah dipastikan bahwa antar kedua container (alpine dan redis-server) sudah terhubung dengan menggunakan fasilitas link.
 
   - **docker run --link redis-server:redis alpine ping -c 1 redis**
 
-  ![ping container](img\1_2c.png)
+![ping container](img\1_2c.png)
 
   ​	Perintah ping antar container digunakan untuk mengetahui suatu host terhubung dalam satu jaringan atau tidak. 
 
@@ -52,17 +52,17 @@ Ketika menghubungkan container dengan link, sangat penting untuk memberikan nama
 
   Perintah ini digunkanan untuk menjalankan menjalankan container katacoda/redis-node-docker-example yang di link bersama container redis, dengan meng-ekspose port yang digunakan yaitu port 3000:3000.
 
-  ![mengkoneksikan app](img\1-3a.png)
+![mengkoneksikan app](img\1-3a.png)
 
   **curl docker:3000**
 
-  ![menjalankan image](img\1-3b.png)
+![menjalankan image](img\1-3b.png)
 
 4. **Mengkoneksikan ke Redis CLI**
 
   **docker run -it --link redis-server:redis redis redis-cli -h redis**
 
-  ![mengkoneksikan container](img\1-4.png)
+![mengkoneksikan container](img\1-4.png)
 
 ## Komunikasi menggunakan Network
 
@@ -74,7 +74,7 @@ Dalam docker network ini,docker tidak lagi menambahkan environment variable dan 
 
    **docker network create backend-network**
 
-   ![membuat network](img\2-1.png)
+  ![membuat network](img\2-1.png)
 
    
 
@@ -87,21 +87,21 @@ Dalam docker network ini,docker tidak lagi menambahkan environment variable dan 
 
    **docker run --net=backend-network alpine env**
 
-   ![komunikasi network](img\2-2a.png)
+  ![komunikasi network](img\2-2a.png)
 
    **docker run --net=backend-network alpine cat /etc/hosts**
 
-   ![komunikasinetwork](img\2-2b.png)
+  ![komunikasinetwork](img\2-2b.png)
 
    **docker run --net=backend-network alpine cat /etc/resolv.conf**
 
-   ![komunikasi network](img\2-2c.png)
+  ![komunikasi network](img\2-2c.png)
 
    > ​	Container alpine terhubung dengan backend-network menggunakan alamat IP DNS Server dengan alamat 127.0.0.11
 
    **docker run --net=backend-network alpine ping -c1 redis**
 
-   ![komunikasi network](img\2-2d.png)
+  ![komunikasi network](img\2-2d.png)
 
    
 
@@ -116,7 +116,7 @@ Dalam docker network ini,docker tidak lagi menambahkan environment variable dan 
 
    **docker network connect frontend-network redis**
 
-   ![koneksi contianer](img\2-3a.png)
+  ![koneksi contianer](img\2-3a.png)
 
    
 
@@ -124,10 +124,10 @@ Dalam docker network ini,docker tidak lagi menambahkan environment variable dan 
 
    **docker run -d -p 3000:3000 --net=frontend-network katacoda/redis-node-docker-example**
 
-   ![koneksi container](img\2-3b.png)
+  ![koneksi container](img\2-3b.png)
 
    **curl docker:3000**
 
-   ![coneksi container](img\2-3c.png)
+  ![coneksi container](img\2-3c.png)
 
 
