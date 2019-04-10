@@ -5,9 +5,9 @@
 
 ## Komunikasi menggunakan Link
 
-	Container dapat saling berkomunikasi antar satu dan yang lainnya dengan fasilitas link. Dengan docker, kunci ketika menggunakan link untuk menghubungkan antar container adalah penamaan dari container itu sendiri.
+Container dapat saling berkomunikasi antar satu dan yang lainnya dengan fasilitas link. Dengan docker, kunci ketika menggunakan link untuk menghubungkan antar container adalah penamaan dari container itu sendiri.
 	
-	Ketika menghubungkan container dengan link, sangat penting untuk memberikan nama yang mudah diingat bagi container sumber yang akan dihubungkan.
+Ketika menghubungkan container dengan link, sangat penting untuk memberikan nama yang mudah diingat bagi container sumber yang akan dihubungkan.
 
 1. **Menjalankan Redis**
 
@@ -23,21 +23,22 @@
 
    	**--link <nama|id container>:<alias>**
 
-  > Nama container mendefinisikan sumber container yang telah dibuat pada langkah sebelumnya, sedangkan alias mendefinisikan nama dari host-nya.
-  >
-  > -  **docker run --link redis-server:redis alpine env**
-  >
-  >   Image alpine akan dilink kan ke container redis-server dengan nama alias redis. Docker akan men-set beberapa environment variable berdasarkan link ke sebuah container. Environment variable ini akan memberikan informasi seperti port dan alamat IP.
+  Nama container mendefinisikan sumber container yang telah dibuat pada langkah sebelumnya, sedangkan alias mendefinisikan nama dari host-nya.
+  
+  -  **docker run --link redis-server:redis alpine env**
+  
+   Image alpine akan dilink kan ke container redis-server dengan nama alias redis. Docker akan men-set beberapa environment variable berdasarkan link ke sebuah container. Environment variable ini akan memberikan informasi seperti port dan alamat IP.
 
-  ![membuat link](img/1_2a.png)
+![membuat link](img/1_2a.png)
 
   - **docker run --link redis-server:redis alpine cat /etc/hosts**
 
     Docker akan meng-update file HOSTS ubuntu container dengan menambahkan sebuah input untuk sumber container berupa *nama asli container, alias, dan hash id* .
 
+
   ![updatehost](img\1_2b.png)
 
-  ​	Dari gambar diatas, sudah dipastikan bahwa antar kedua container (alpine dan redis-server) sudah terhubung dengan menggunakan fasilitas link.
+    Dari gambar diatas, sudah dipastikan bahwa antar kedua container (alpine dan redis-server) sudah terhubung dengan menggunakan fasilitas link.
 
   - **docker run --link redis-server:redis alpine ping -c 1 redis**
 
