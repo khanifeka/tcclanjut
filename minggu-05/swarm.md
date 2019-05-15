@@ -111,7 +111,7 @@ Perintah **docker service scale http=5** ini akan meningkatkan skala layanan htt
 Perintah **docker ps** digunakan untuk melihat node tambahan yang berjalan.
 
 
-
+[**KEMBALI**](README.md)
 
 
 
